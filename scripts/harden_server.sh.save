@@ -1,0 +1,19 @@
+!#/bin/bash
+
+echo "Updating system..."
+sudo yum update -y
+
+echo "Creating admin user..."
+sudo adduser devopsadmin
+sudo usermod -aG wheel devopsadmin
+
+echo "Disabling root SSH login..."
+sudo sed -i 's/^PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config
+sudo sed -i 's/^PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config
+
+echo "Restarting  SSH service..."
+sudo syestemctl restart sshd
+
+echo "Hardening Complete!"
+
+
