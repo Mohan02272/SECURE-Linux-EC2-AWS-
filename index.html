@@ -1,12 +1,227 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mohan DevOps Project</title>
+    <meta charset="UTF-8">
+    <title>Rashedul Islam | DevOps Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: #f1f5f9;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            color: #38bdf8;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #f1f5f9;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: auto;
+            font-size: 18px;
+            color: #cbd5e1;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+            color: #38bdf8;
+        }
+
+        .skills, .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #334155;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        footer {
+            background: #1e293b;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        @media(max-width: 600px) {
+            .hero h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>🚀 Secure Linux EC2 Deployment</h1>
-    <p>Server hardened successfully.</p>
-    <p>Deployment structure working.</p>
-    <p>Version: v1</p>
+
+<header>
+    <h1>Rashedul Islam</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>DevOps & Linux Enthusiast</h2>
+    <p>
+        Passionate about DevOps, Linux Administration, Networking & Cloud Technologies.
+        I build scalable infrastructure and automate deployments.
+    </p>
+    <a href="#contact" class="btn">Hire Me</a>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p style="text-align:center; max-width:700px; margin:auto;">
+            I am a beginner DevOps Engineer focusing on Linux, Docker, Networking,
+            CI/CD pipelines, and Cloud platforms like AWS. I am continuously learning
+            and building real-world projects to strengthen my skills.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+            <div class="card">
+                <h3>Linux</h3>
+                <p>System Administration, Permissions, SSH, firewalld</p>
+            </div>
+            <div class="card">
+                <h3>Docker</h3>
+                <p>Containerization, Dockerfile, Image Building</p>
+            </div>
+            <div class="card">
+                <h3>Networking</h3>
+                <p>IP, Ping, Curl, Netstat, Security Basics</p>
+            </div>
+            <div class="card">
+                <h3>Cloud</h3>
+                <p>AWS EC2, Virtual Machines, Infrastructure Basics</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <h3>Dockerized Web App</h3>
+                <p>Created and deployed a containerized application using Docker.</p>
+            </div>
+            <div class="card">
+                <h3>Linux Log Automation</h3>
+                <p>Automated log cleanup using bash scripting and cron jobs.</p>
+            </div>
+            <div class="card">
+                <h3>Cloud VM Setup</h3>
+                <p>Configured Virtual Machines and managed networking setup.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container contact">
+        <h2 class="section-title">Contact Me</h2>
+        <p>Email: yourmail@example.com</p>
+        <p>GitHub: github.com/yourusername</p>
+        <p>LinkedIn: linkedin.com/in/yourprofile</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Rashedul Islam | DevOps Portfolio
+</footer>
+
 </body>
 </html>
+
