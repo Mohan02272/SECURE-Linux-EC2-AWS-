@@ -3,147 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rashedul Islam Mohan | DevOps Engineer</title>
-
+<title>Rashedul Islam Mohan | DevOps Portfolio</title>
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
+/* ----- Reset & Global ----- */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif; }
+body { background: linear-gradient(135deg,#0f172a,#020617); color:white; line-height:1.6; }
+a { color:#38bdf8; text-decoration:none; }
+a:hover { text-decoration:underline; }
 
-body{
-    background: linear-gradient(135deg,#0f172a,#020617);
-    color:white;
-    overflow-x:hidden;
-}
+/* ----- Header ----- */
+header { text-align:center; padding:30px; background:#1e293b; box-shadow:0 4px 6px rgba(0,0,0,0.3); }
+header h1 { font-size:36px; color:#38bdf8; }
+nav { margin-top:10px; }
+nav a { margin:0 15px; font-weight:bold; color:white; }
+nav a:hover { color:#38bdf8; }
 
-header{
-    text-align:center;
-    padding:30px;
-}
-
-header h1{
-    font-size:32px;
-    color:#38bdf8;
-}
-
-.hero{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:80vh;
-    flex-direction:column;
-    position:relative;
-}
-
-.profile-container{
-    position:relative;
-    width:300px;
-    height:300px;
-}
-
-.profile-img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    border:5px solid #38bdf8;
-    z-index:10;
-}
-
-.orbit{
-    position:absolute;
-    width:100%;
-    height:100%;
-    animation:rotate 15s linear infinite;
-}
-
-.tool{
-    position:absolute;
-    width:60px;
-    height:60px;
-    background:#1e293b;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:12px;
-    text-align:center;
-    padding:5px;
-    border:2px solid #38bdf8;
-    box-shadow:0 0 15px #38bdf8;
-}
-
-@keyframes rotate{
-    from{ transform:rotate(0deg); }
-    to{ transform:rotate(360deg); }
-}
-
-.hero h2{
-    margin-top:40px;
-    font-size:28px;
-    color:#cbd5e1;
-}
-
-.about, .skills{
-    padding:60px 20px;
-    text-align:center;
-}
-
-.section-title{
-    font-size:28px;
-    color:#38bdf8;
-    margin-bottom:30px;
-}
-
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-    max-width:1000px;
-    margin:auto;
-}
-
-.card{
-    background:rgba(255,255,255,0.05);
-    padding:20px;
-    border-radius:12px;
-    backdrop-filter:blur(10px);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    background:rgba(56,189,248,0.1);
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    background:#0f172a;
-    color:#94a3b8;
-}
-
-/* Position tools in circle */
+/* ----- Hero ----- */
+.hero { display:flex; justify-content:center; align-items:center; flex-direction:column; padding:80px 20px; position:relative; }
+.profile-container { position:relative; width:300px; height:300px; margin-bottom:20px; }
+.profile-img { width:180px; height:180px; border-radius:50%; object-fit:cover; border:5px solid #38bdf8; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:10; }
+.orbit { position:absolute; width:100%; height:100%; animation:rotate 20s linear infinite; }
+.tool { position:absolute; width:60px; height:60px; background:#1e293b; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:12px; text-align:center; padding:5px; border:2px solid #38bdf8; box-shadow:0 0 15px #38bdf8; }
+@keyframes rotate { from{ transform:rotate(0deg);} to{ transform:rotate(360deg);} }
 .tool:nth-child(1){ top:0; left:50%; transform:translate(-50%,0);}
 .tool:nth-child(2){ top:20%; right:0;}
 .tool:nth-child(3){ bottom:20%; right:0;}
 .tool:nth-child(4){ bottom:0; left:50%; transform:translate(-50%,0);}
 .tool:nth-child(5){ bottom:20%; left:0;}
 .tool:nth-child(6){ top:20%; left:0;}
+.hero h2 { margin-top:20px; font-size:28px; color:#cbd5e1; text-align:center; }
 
-@media(max-width:600px){
-    .profile-container{
-        width:220px;
-        height:220px;
-    }
-}
+/* ----- Sections ----- */
+section { padding:60px 20px; max-width:1100px; margin:auto; }
+.section-title { font-size:32px; color:#38bdf8; text-align:center; margin-bottom:40px; }
+
+/* ----- Skills ----- */
+.skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+.card { background: rgba(255,255,255,0.05); padding:20px; border-radius:12px; backdrop-filter:blur(10px); transition:0.3s; }
+.card:hover { transform:translateY(-8px); background:rgba(56,189,248,0.1); }
+.card h3 { margin-bottom:10px; color:#38bdf8; }
+
+/* ----- Projects ----- */
+.projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.project-card img { width:100%; border-radius:8px; margin-bottom:10px; }
+.project-card h3 { color:#38bdf8; margin-bottom:5px; }
+
+/* ----- Contact ----- */
+.contact { text-align:center; }
+.contact p { margin:10px 0; font-size:18px; }
+.contact a { display:inline-block; margin:0 10px; }
+
+/* ----- Footer ----- */
+footer { text-align:center; padding:20px; background:#1e293b; color:#94a3b8; margin-top:30px; }
+
+/* ----- Responsive ----- */
+@media(max-width:600px){ .profile-container{ width:220px; height:220px;} .hero h2{ font-size:22px;} }
 </style>
 </head>
 
@@ -151,13 +65,17 @@ footer{
 
 <header>
     <h1>Rashedul Islam Mohan</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-
 <div class="profile-container">
-
-    <!-- Rotating DevOps Tools -->
     <div class="orbit">
         <div class="tool">Docker</div>
         <div class="tool">Kubernetes</div>
@@ -166,47 +84,76 @@ footer{
         <div class="tool">CI/CD</div>
         <div class="tool">Terraform</div>
     </div>
-
-    <!-- Profile Image -->
     <img src="profile.jpg" alt="Profile Image" class="profile-img">
-
 </div>
-
-<h2>DevOps Engineer | Linux & Cloud Enthusiast</h2>
-
+<h2>DevOps Engineer | Linux & Cloud Enthusiast | Git & Automation</h2>
 </section>
 
-<section class="about">
+<!-- ABOUT -->
+<section id="about">
     <h2 class="section-title">About Me</h2>
-    <p>
-        Passionate DevOps enthusiast focused on Linux Administration, Docker, Cloud Infrastructure,
-        CI/CD automation and networking security. Continuously learning and building real-world projects.
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        I am a passionate DevOps Engineer focusing on Linux Administration, Cloud Infrastructure, Docker, CI/CD automation, Git-based workflows, and networking security.
+        I love building automated pipelines and deploying projects efficiently.
     </p>
 </section>
 
-<section class="skills">
+<!-- SKILLS -->
+<section id="skills">
     <h2 class="section-title">Core Skills</h2>
-
     <div class="skills-grid">
         <div class="card">
             <h3>Linux Administration</h3>
-            <p>SSH, firewalld, systemctl, networking, permissions</p>
+            <p>SSH, firewalld, systemctl, networking, file permissions, automation scripting</p>
         </div>
-
         <div class="card">
             <h3>Containerization</h3>
-            <p>Docker, Dockerfile, Image optimization</p>
+            <p>Docker, Dockerfile, Docker Compose, Kubernetes basics</p>
         </div>
-
         <div class="card">
-            <h3>Cloud Platforms</h3>
-            <p>AWS EC2, VM setup, Infrastructure basics</p>
+            <h3>Cloud & CI/CD</h3>
+            <p>AWS EC2, Git-based CI/CD pipelines, Terraform, automated deployments</p>
         </div>
-
         <div class="card">
-            <h3>Networking</h3>
-            <p>IP, Ping, Curl, Netstat, Security concepts</p>
+            <h3>Networking & Security</h3>
+            <p>IP configuration, ping, curl, netstat, firewall, monitoring</p>
         </div>
+        <div class="card">
+            <h3>Version Control</h3>
+            <p>Git, GitHub, branching strategies, pull requests, automation</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card card">
+            <img src="project-docker.png" alt="Docker Project">
+            <h3>Dockerized Web App</h3>
+            <p>Containerized web application with automated deployment using Docker & Git.</p>
+        </div>
+        <div class="project-card card">
+            <img src="project-ci.png" alt="CI/CD Project">
+            <h3>CI/CD Automation</h3>
+            <p>Git-based CI/CD pipelines for automatic build, test, and deployment.</p>
+        </div>
+        <div class="project-card card">
+            <img src="project-terraform.png" alt="Terraform Project">
+            <h3>Terraform Infrastructure</h3>
+            <p>Infrastructure as Code: Provisioning cloud resources using Terraform scripts.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact">
+        <p>Email: <a href="mailto:rashedulislammohan@gmail.com">rashedulislammohan@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/Mohan02272" target="_blank">Mohan02272</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/Rashedul-Islam-Mohan" target="_blank">Rashedul-Islam-Mohan</a></p>
     </div>
 </section>
 
@@ -216,5 +163,3 @@ footer{
 
 </body>
 </html>
-
-
